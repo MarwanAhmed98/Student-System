@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/CrudIcon.png">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Crud System</title>
+</head>
+
+<body>
+
+    <div class="Container">
+        <h1>Crud System</h1>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="studentName" placeholder="Student Name">
+            <label for="studentName">Student Name</label>
+        </div>
+        <div id="Alert" class="alert alert-danger mt-2 d-none">
+            Name must be at least 3 characters
+        </div>
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="studentAge" placeholder="name@example.com">
+            <label for="studentAge">Student Age</label>
+        </div>
+        <div id="Alert2" class="alert alert-danger mt-2 d-none">
+            Age Must be More than 18 Years Old
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="studentEmail" placeholder="name@example.com">
+            <label for="studentEmail">Student Email</label>
+        </div>
+        <div id="Alert3" class="alert alert-danger mt-2 d-none">
+            Must Match Email Format
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="studentPassword" placeholder="name@example.com">
+            <label for="studentPassword">Student Password</label>
+        </div>
+        <div id="Alert4" class="alert alert-danger mt-2 d-none">
+            Must Contain Capital Letter and Small Letters and Number and at least 5 length
+        </div>
+        <div class="form-floating mb-3">
+            <input type="file" class="form-control" id="studentPhoto" placeholder="name@example.com">
+            <label for="studentPhoto">Student Photo</label>
+        </div>
+        <button id="addBtn" onclick="addStudent()">Add Student</button>
+        <button class="d-none" id="updateBtn" onclick="updateStudent()">Update Student</button>
+    </div>
+    <div class="search">
+        <input oninput="searchData()" type="search" class="form-control" id="searchInput"
+            placeholder="Search By Name...">
+    </div>
+    <div class="box">
+        <table class="table table-dark">
+            <thead>
+                <th>Student Name</th>
+                <th>Student Age</th>
+                <th>Student Email</th>
+                <th>Student Password</th>
+                <th>Student Photo</th>
+                <th>Action</th>
+            </thead>
+            <tbody id="Data">
+                <tr class="table-active">
+                </tr>
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
